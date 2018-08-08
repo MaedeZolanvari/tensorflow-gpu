@@ -8,13 +8,19 @@ I faced many problems to get this worked, even I read and studied many tutorials
 One of my PC's is Dell Alienware with M240A1 GeForce GTX 1080, the other one is HP Envy with E225W-1920 GeForce GTX 1080.
 
 1.	The very first step is to make sure you have the right NVIDIA driver installed (the right version number), if you don’t make sure of it, you will have runtime errors at the very end.
+
 http://www.nvidia.com/Download/index.aspx?lang=en-us 
-(The right driver number for my PC's as of now is 398.82)
+
+(The right driver number for my both PC's as of now is 398.82)
 
 2.	Get the right CUDA Toolkit:
+
 https://developer.nvidia.com/cuda-downloads
+
 In our system, only CUDA 9.0 worked, others gave compatibility issue.
+
 Install it, and make sure during installation, all CUDA components are marked to be installed, choose custom installation if needed. If you want, you can install the latest patch too.
+
 More info here: https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/
 
 After this step, you have to update the NVIDIA driver, because CUDA might change it to an old version: From Start menu go to Device Manager -> Display adapter -> NVIDIA GeForce, then click on update the driver (so, in our case, it will be again 398.82)
