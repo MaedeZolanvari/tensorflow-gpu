@@ -1,6 +1,8 @@
 # tensorflow-gpu
 #Author: Maede Zolanvari
+
 This is a tutorial on how to install TensorFlow GPU on Windows 10.
+
 I countered many problems to get this worked, even I read and studied many tutorials. Here, I provided a complete detailed approach along with a benchmark python file, so you can test the preformance of your GPU after installation.
 
 One of my PC's is Dell Alienware with M240A1 GeForce GTX 1080, the other one is HP Envy with E225W-1920 GeForce GTX 1080.
