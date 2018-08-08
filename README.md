@@ -67,7 +67,7 @@ https://www.anaconda.com/download/
 
 Don’t forget to restart your computer. From here there are two ways to continue. First way is recommended.
 
-6. First way: Go to Anaconda Navigator, first Environments then in the “base(root)”, install the basic required packages, tensoreflow-gpu, keras-gpu, numpy-devel, conda-server, conda-build-all, constructor, conda-api, conda-manager, zope,appdirs, constantly, hyperlink, incremental, zope.interface are required.
+6. First way: Go to Anaconda Navigator, first Environments then in the “base(root)”, install the basic required packages, tensoreflow-gpu, keras-gpu, numpy-devel, conda-server, conda-build-all, constructor, conda-api, conda-manager are required.
 
 7. Second way: (You can skip this step if you followed step 6). Go to Anaconda's directory and open the Anaconda Prompt, run the following command in the opened Command Prompt
 
