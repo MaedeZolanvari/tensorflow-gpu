@@ -53,9 +53,9 @@ Copy below files from the cudNN folder to corresponding folders:
 
 Make sure there is a PATH defined in Environment Variables (Control Panel -> Advanced system settings), as:
 
-•	Variable Name: CUDA_PATH 
 
-•	Variable Value: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0
+	Variable Name: CUDA_PATH 
+	Variable Value: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0
 
 More info here: https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows
 
