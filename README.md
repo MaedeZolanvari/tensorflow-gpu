@@ -7,13 +7,13 @@ I faced many problems to get this worked, even I read and studied many tutorials
 
 One of my PC's is Dell Alienware with M240A1 GeForce GTX 1080, the other one is HP Envy with E225W-1920 GeForce GTX 1080.
 
-1.The very first step is to make sure you have the right NVIDIA driver installed (the right version number), if you don’t make sure of it, you will have runtime errors at the very end.
+1. The very first step is to make sure you have the right NVIDIA driver installed (the right version number), if you don’t make sure of it, you will have runtime errors at the very end.
 
 http://www.nvidia.com/Download/index.aspx?lang=en-us
 
 (The right driver number for my both PC's as of now is 398.82)
 
-2.Get the right CUDA Toolkit:
+2. Get the right CUDA Toolkit:
 
 https://developer.nvidia.com/cuda-downloads
 
@@ -23,7 +23,7 @@ More info here: https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-w
 
 After this step, you have to update the NVIDIA driver, because CUDA might change it to an old version: From Start menu go to Device Manager -> Display adapter -> NVIDIA GeForce, then click on update the driver (so, in our case, it will be again 398.82)
 
-3.(Optional, but recommended to check if CUDA was installed right) install Visual Studio (VS):
+3. (Optional, but recommended to check if CUDA was installed right) install Visual Studio (VS):
 
 https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409
 
@@ -41,7 +41,7 @@ I had several errors running this, they can easily be solved, by right click on 
 
 There is another way to check if CUDA was installed correctly: Download and run CUDA-Z and run it, if it shows the CUDA is installed, it means everything is working.
 
-4.	Download the right cudNN regarding your CUDA version from the below link (you need to make a developer account and log into it to be able to download)
+4. Download the right cudNN regarding your CUDA version from the below link (you need to make a developer account and log into it to be able to download)
 
 https://developer.nvidia.com/rdp/cudnn-download 
 
@@ -59,15 +59,15 @@ Make sure there is a PATH defined in Environment Variables (Control Panel -> Adv
 
 More info here: https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows
 
-5.	Install Anaconda:
+5. Install Anaconda:
 
 https://www.anaconda.com/download/ 
 
 Don’t forget to restart your computer. From here there are two ways to continue. First way is recommended.
 
-6.	First way: Go to Anaconda Navigator, first Environments then in the “base(root)”, install the basic required packages, tensoreflow-gpu, keras-gpu, numpy-devel, conda-server, conda-build-all, constructor, conda-api, conda-manager, zope,appdirs, constantly, hyperlink, incremental, zope.interface are required.
+6. First way: Go to Anaconda Navigator, first Environments then in the “base(root)”, install the basic required packages, tensoreflow-gpu, keras-gpu, numpy-devel, conda-server, conda-build-all, constructor, conda-api, conda-manager, zope,appdirs, constantly, hyperlink, incremental, zope.interface are required.
 
-7.	Second way: (You can skip this step if you followed step 6). Go to Anaconda's directory and open the Anaconda Prompt, run the following command in the opened Command Prompt
+7. Second way: (You can skip this step if you followed step 6). Go to Anaconda's directory and open the Anaconda Prompt, run the following command in the opened Command Prompt
 •	“conda create -n tensorflow pip python=3.5”
 •	“activate tensorflow”
 •	“pip install --ignore-installed --upgrade tensorflow-gpu”
@@ -80,7 +80,7 @@ If the output is like below, the installation was successful:
 •	“Hello, TensorFlow!”
 More info here: https://www.tensorflow.org/install/install_windows 
 
-8.	On my both systems, none was fast after finishing all these steps. Here was the trick that I used and it worked. I added this line to my code: 
+8. On my both systems, none was fast after finishing all these steps. Here was the trick that I used and it worked. I added this line to my code: 
 •	import tensorflow as tf
 •	with tf.device(‘/device:GPU:0’):
 You can check it out through my test file (bench.py) too. Open the Anaconda -> Spyder, open the attached bench.py file. This  takes only 27.9 seconds on my PC's to run.
