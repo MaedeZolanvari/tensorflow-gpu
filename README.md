@@ -68,23 +68,31 @@ Don’t forget to restart your computer. From here there are two ways to continu
 6. First way: Go to Anaconda Navigator, first Environments then in the “base(root)”, install the basic required packages, tensoreflow-gpu, keras-gpu, numpy-devel, conda-server, conda-build-all, constructor, conda-api, conda-manager, zope,appdirs, constantly, hyperlink, incremental, zope.interface are required.
 
 7. Second way: (You can skip this step if you followed step 6). Go to Anaconda's directory and open the Anaconda Prompt, run the following command in the opened Command Prompt
-•	“conda create -n tensorflow pip python=3.5”
-•	“activate tensorflow”
-•	“pip install --ignore-installed --upgrade tensorflow-gpu”
-•	“python”
-•	“import tensorflow as tf”
-•	“hello = tf.constant('Hello, TensorFlow!')”
-•	“sess = tf.Session()”
-•	“print(sess.run(hello))”
+
+		“conda create -n tensorflow pip python=3.5”
+		“activate tensorflow”
+		“pip install --ignore-installed --upgrade tensorflow-gpu”
+		“python”
+		“import tensorflow as tf”
+		“hello = tf.constant('Hello, TensorFlow!')”
+		“sess = tf.Session()”
+		“print(sess.run(hello))”
+
 If the output is like below, the installation was successful:
-•	“Hello, TensorFlow!”
+
+		“Hello, TensorFlow!”
+
 More info here: https://www.tensorflow.org/install/install_windows 
 
-8. On my both systems, none was fast after finishing all these steps. Here was the trick that I used and it worked. I added this line to my code: 
-•	import tensorflow as tf
-•	with tf.device(‘/device:GPU:0’):
-You can check it out through my test file (bench.py) too. Open the Anaconda -> Spyder, open the attached bench.py file. This  takes only 27.9 seconds on my PC's to run.
+8. On my both systems, none was fast after finishing all these steps. Here was the trick that I used and it worked. I added this line to my code:
+
+		"import tensorflow as tf"
+		"with tf.device(‘/device:GPU:0’)"
+
+You can check it out through my test file (benchmark.py) too. Open the Anaconda -> Spyder, open the attached bench.py file. This  takes only 27.9 seconds on my PC's to run.
+
 For some reason, my program was still slow. After I changed the number of GPU to 1, and getting the error that this device is not available (my PC's both have only one GPU with ID 0), and changing it back to GPU:0, and restarting the program, made my both PC's super fast.As I said  both PC's are running the benchmark (or test) python file in about 27 seconds,which used to take more than 30 minutes with 1/10 number of loops and 1/100 smaller matrices dimensions.
 
 On a side note, you can change the settings in NVIDIA Control Panel, forcing the PC to always use GPU (Recommened):
-•	Right click on Desktop -> NVIDIA Control Panel -> 3D Settings -> Configure Surround PHYSX -> PHYSX settings -> Processor -> Change it from Auto-select to GeForce GTX 1080.
+
+Right click on Desktop -> NVIDIA Control Panel -> 3D Settings -> Configure Surround PHYSX -> PHYSX settings -> Processor -> Change it from Auto-select to GeForce GTX 1080.
