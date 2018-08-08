@@ -1,4 +1,5 @@
-#bench.py
+#Author: Maede Zolanvari
+#Date: Aug. 8th 2018
 
 
 import tensorflow as tf
@@ -20,13 +21,13 @@ with tf.device ('/device:GPU:0'):
         x = tf.random_normal([1000000, 100])
         y = tf.random_normal([100, 1000000])
         res = tf.matmul(x, y)
-       # with tf.Session() as sess:
-           # sess.run(res)
+        # with tf.Session() as sess:
+        # sess.run(res)
         x = tf.random_normal([10000, 100])
         y = tf.random_normal([100, 10000])
         res = tf.matmul(x, y)
         #with tf.Session() as sess:
-         #   sess.run(res)
+        #   sess.run(res)
     """
     # Run the graph with full trace option
     with tf.Session() as sess:
