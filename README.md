@@ -39,7 +39,9 @@ More info here: https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html#w
 
 I had several errors running this, they can easily be solved, by right click on the project name and check the errors and simple googling :D
 
-There is another way to check if CUDA was installed correctly: Download and run CUDA-Z and run it, if it shows the CUDA is installed, it means everything is working.
+There is another way to check if CUDA was installed correctly:
+
+Download and run CUDA-Z and run it, if it shows the CUDA is installed, it means everything is working.
 
 4. Download the right cudNN regarding your CUDA version from the below link (you need to make a developer account and log into it to be able to download)
 
