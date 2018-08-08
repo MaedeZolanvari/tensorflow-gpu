@@ -91,9 +91,9 @@ More info here: https://www.tensorflow.org/install/install_windows
 		"import tensorflow as tf"
 		"with tf.device(‘/device:GPU:0’)"
 
-You can check it out through my test file (benchmark.py) too. Open the Anaconda -> Spyder, open the attached bench.py file. This  takes only 27.9 seconds on my PC's to run.
+You can check it out through my test file (benchmark.py) too. Open the Anaconda -> Spyder, open the benchmark.py file. This program  takes only 27.9 seconds to run on my both PC's.
 
-For some reason, my program was still slow. After I changed the number of GPU to 1, and getting the error that this device is not available (my PC's both have only one GPU with ID 0), and changing it back to GPU:0, and restarting the program, made my both PC's super fast.As I said  both PC's are running the benchmark (or test) python file in about 27 seconds,which used to take more than 30 minutes with 1/10 number of loops and 1/100 smaller matrices dimensions.
+For some reason, my program was still slow. After I changed the number of GPU to 1, and getting the error that this device is not available (my PC's both have only one GPU with ID 0), and changing it back to GPU:0, and restarting the program, made my both PC's super fast. As I said  both PC's are running the benchmark python file in about 27 seconds,which used to take more than 30 minutes with 1/10 number of loops and 1/100 smaller matrices dimensions.
 
 On a side note, you can change the settings in NVIDIA Control Panel, forcing the PC to always use GPU (Recommened):
 
