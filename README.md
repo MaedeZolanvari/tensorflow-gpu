@@ -34,9 +34,9 @@ There is another way to check if CUDA was installed correctly: Download and run 
 4.	Download the right cudNN regarding your CUDA version from the below link (you need to make a developer account and log into it to be able to download)
 https://developer.nvidia.com/rdp/cudnn-download 
 Copy below files from the cudNN folder to corresponding folders:
-1.	“\cuda\bin\cudnn64_7.dll” Copy to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin”
-2.	“\cuda\include\cudnn.h” Copy to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include\”
-3.	“\cuda\lib\x64\cudnn.lib” Copy to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\lib\x64”
+	“\cuda\bin\cudnn64_7.dll” Copy to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin”
+  “\cuda\include\cudnn.h” Copy to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include\”
+  “\cuda\lib\x64\cudnn.lib” Copy to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\lib\x64”
 
 Make sure there is a PATH defined in Environment Variables (Control Panel -> Advanced system settings), as:
 •	Variable Name: CUDA_PATH 
@@ -63,7 +63,7 @@ If the output is like below, the installation was successful:
 •	“Hello, TensorFlow!”
 More info here: https://www.tensorflow.org/install/install_windows 
 
-8.	In my both systems, none was fast after finishing all these steps. Here was the trick that I used and it worked. I added this line to my code: 
+8.	On my both systems, none was fast after finishing all these steps. Here was the trick that I used and it worked. I added this line to my code: 
 •	import tensorflow as tf
 •	with tf.device(‘/device:GPU:0’):
 You can check it out through my test file (bench.py) too. Open the Anaconda -> Spyder, open the attached bench.py file. This  takes only 27.9 seconds on my PC's to run.
