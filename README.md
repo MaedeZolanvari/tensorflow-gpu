@@ -90,6 +90,8 @@ More info here: https://www.tensorflow.org/install/install_windows
 
 		"import tensorflow as tf"
 		"with tf.device(‘/device:GPU:0’)"
+		
+More info here: https://www.tensorflow.org/guide/using_gpu
 
 You can check it out through my test file (benchmark.py) too. Open the Anaconda -> Spyder, open the benchmark.py file. This program  takes only 27.9 seconds to run on my both PC's.
 
